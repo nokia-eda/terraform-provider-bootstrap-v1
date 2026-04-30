@@ -1,0 +1,98 @@
+provider:
+  name: bootstrap
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/bootstrap.eda.nokia.com
+      method: GET
+
+  init:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}
+      method: GET
+
+  init_list:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits
+      method: GET
+
+  management_router:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/{name}
+      method: GET
+
+  management_router_list:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1
+      method: GET
+
+  rotate_certificate:
+    read:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}
+      method: GET
+
+  rotate_certificate_list:
+    read:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates
+      method: GET
+
+  satellite:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/satellites/{name}
+      method: GET
+
+  satellite_list:
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/satellites
+      method: GET
+
+  workflow_get_inputs_resp_elem:
+    read:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}/_input
+      method: GET
+
+resources:
+  init:
+    create:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits
+      method: POST
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}
+      method: GET
+    update:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}
+      method: PUT
+    delete:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}
+      method: DELETE
+
+  management_router:
+    create:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters
+      method: POST
+    read:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/{name}
+      method: GET
+    update:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/{name}
+      method: PUT
+    delete:
+      path: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/{name}
+      method: DELETE
+
+  rotate_certificate:
+    create:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates
+      method: POST
+    read:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}
+      method: GET
+    delete:
+      path: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}
+      method: DELETE
