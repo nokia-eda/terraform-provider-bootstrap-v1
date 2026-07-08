@@ -2363,11 +2363,23 @@
                                                         {
                                                             "name": "interface_selectors",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "required",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
-                                                                "description": "Management interface selector"
+                                                                "description": "Management interface selector",
+                                                                "validators": [
+                                                                    {
+                                                                        "custom": {
+                                                                            "imports": [
+                                                                                {
+                                                                                    "path": "github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
+                                                                                }
+                                                                            ],
+                                                                            "schema_definition": "listvalidator.SizeAtLeast(1)"
+                                                                        }
+                                                                    }
+                                                                ]
                                                             }
                                                         },
                                                         {

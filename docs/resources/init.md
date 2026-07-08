@@ -68,9 +68,12 @@ Optional:
 <a id="nestedatt--spec--mgmt--interface"></a>
 ### Nested Schema for `spec.mgmt.interface`
 
-Optional:
+Required:
 
 - `interface_selectors` (List of String) Management interface selector
+
+Optional:
+
 - `subinterface_index` (Number) Subinterface index
 
 

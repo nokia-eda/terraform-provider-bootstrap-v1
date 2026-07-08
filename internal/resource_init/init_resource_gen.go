@@ -5,6 +5,7 @@ package resource_init
 import (
 	"context"
 	"fmt"
+	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
@@ -140,9 +141,12 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 								Attributes: map[string]schema.Attribute{
 									"interface_selectors": schema.ListAttribute{
 										ElementType:         types.StringType,
-										Optional:            true,
+										Required:            true,
 										Description:         "Management interface selector",
 										MarkdownDescription: "Management interface selector",
+										Validators: []validator.List{
+											listvalidator.SizeAtLeast(1),
+										},
 									},
 									"subinterface_index": schema.Int64Attribute{
 										Optional:            true,

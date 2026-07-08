@@ -1,0 +1,59 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/bootstrap.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1
+    oas_schema: ResourceList
+  - model_name: init_list
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits
+    oas_schema: com.nokia.eda.bootstrap.v1.InitList
+  - model_name: init
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}
+    oas_schema: com.nokia.eda.bootstrap.v1.Init
+  - model_name: management_router_list
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters
+    oas_schema: com.nokia.eda.bootstrap.v1.ManagementRouterList
+  - model_name: management_router
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/{name}
+    oas_schema: com.nokia.eda.bootstrap.v1.ManagementRouter
+  - model_name: satellite_list
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/satellites
+    oas_schema: com.nokia.eda.bootstrap.v1.SatelliteList
+  - model_name: satellite
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/satellites/{name}
+    oas_schema: com.nokia.eda.bootstrap.v1.Satellite
+  - model_name: rotate_certificate_list
+    oas_endpoint: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates
+    oas_schema: com.nokia.eda.bootstrap.v1.RotateCertificateList
+  - model_name: rotate_certificate
+    oas_endpoint: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}
+    oas_schema: com.nokia.eda.bootstrap.v1.RotateCertificate
+  - model_name: workflow_get_inputs_resp_elem
+    oas_endpoint: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates/{name}/_input
+    oas_schema: WorkflowGetInputsRespElem
+
+resources:
+  - model_name: init
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits
+    oas_schema: com.nokia.eda.bootstrap.v1.Init
+  - model_name: management_router
+    oas_endpoint: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters
+    oas_schema: com.nokia.eda.bootstrap.v1.ManagementRouter
+  - model_name: rotate_certificate
+    oas_endpoint: /workflows/v1/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/rotatecertificates
+    oas_schema: com.nokia.eda.bootstrap.v1.RotateCertificate
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/bootstrap.eda.nokia.com/v1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.bootstrap.v1.Init_DeletedResources
+      get: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/inits/_deleted
+    - oas_schema: com.nokia.eda.bootstrap.v1.ManagementRouter_DeletedResources
+      get: /apps/bootstrap.eda.nokia.com/v1/namespaces/{namespace}/managementrouters/_deleted
+  resources:
