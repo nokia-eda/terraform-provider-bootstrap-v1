@@ -35,10 +35,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) RotateCertificateSpec defines the desired state of RotateCertificate (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -46,17 +42,8 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) RotateCertificateSpec defines the desired state of RotateCertificate (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) RotateCertificateStatus defines the observed state of RotateCertificate (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `node_selectors` (List of String) Selects TopoNodes for which certificate rotation is to be performed.
-- `nodes` (List of String) List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.
-- `skip_certificate_validation` (Boolean) SkipCertificateValidation indicates whether to skip certificate validation after rotation.
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -86,6 +73,16 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `node_selectors` (List of String) Selects TopoNodes for which certificate rotation is to be performed.
+- `nodes` (List of String) List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.
+- `skip_certificate_validation` (Boolean) SkipCertificateValidation indicates whether to skip certificate validation after rotation.
 
 
 <a id="nestedatt--items--status"></a>

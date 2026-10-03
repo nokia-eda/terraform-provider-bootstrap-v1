@@ -5,6 +5,7 @@ package resource_init
 import (
 	"context"
 	"fmt"
+	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -127,6 +128,7 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 				Attributes: map[string]schema.Attribute{
 					"commit_save": schema.BoolAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "Save a startup configuration after each commit.",
 						MarkdownDescription: "Save a startup configuration after each commit.",
 					},
@@ -134,8 +136,12 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 						Attributes: map[string]schema.Attribute{
 							"ip_mtu": schema.Int64Attribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "Set the management interface IP MTU.",
 								MarkdownDescription: "Set the management interface IP MTU.",
+								Validators: []validator.Int64{
+									int64validator.AtMost(65535),
+								},
 							},
 							"interface": schema.SingleNestedAttribute{
 								Attributes: map[string]schema.Attribute{
@@ -150,8 +156,12 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 									},
 									"subinterface_index": schema.Int64Attribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "Subinterface index",
 										MarkdownDescription: "Subinterface index",
+										Validators: []validator.Int64{
+											int64validator.AtMost(65535),
+										},
 									},
 								},
 								CustomType: MgmtInterfaceType{
@@ -160,6 +170,7 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 									},
 								},
 								Optional:            true,
+								Computed:            true,
 								Description:         "Mgmt interface selector",
 								MarkdownDescription: "Mgmt interface selector",
 							},
@@ -168,11 +179,13 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 									Attributes: map[string]schema.Attribute{
 										"next_hop": schema.StringAttribute{
 											Optional:            true,
+											Computed:            true,
 											Description:         "Static route next hop.",
 											MarkdownDescription: "Static route next hop.",
 										},
 										"prefix": schema.StringAttribute{
 											Optional:            true,
+											Computed:            true,
 											Description:         "Static route prefix.",
 											MarkdownDescription: "Static route prefix.",
 										},
@@ -184,6 +197,7 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 									},
 								},
 								Optional:            true,
+								Computed:            true,
 								Description:         "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 								MarkdownDescription: "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 							},
@@ -194,12 +208,14 @@ func InitResourceSchema(ctx context.Context) schema.Schema {
 							},
 						},
 						Optional:            true,
+						Computed:            true,
 						Description:         "Optional management interface settings.\nAllows setting DHCP clients or static IPs as well as\nthe IP MTU.",
 						MarkdownDescription: "Optional management interface settings.\nAllows setting DHCP clients or static IPs as well as\nthe IP MTU.",
 					},
 					"node_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Optional node selectors to perform initial configuration for.\nIf not provided initialization is performed for all nodes.",
 						MarkdownDescription: "Optional node selectors to perform initial configuration for.\nIf not provided initialization is performed for all nodes.",
 					},

@@ -191,29 +191,29 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "commit_save",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Save a startup configuration after each commit."
                                     }
                                 },
                                 {
                                     "name": "mgmt",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "mgmt_interface",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "interface_selectors",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -223,7 +223,7 @@
                                                         {
                                                             "name": "subinterface_index",
                                                             "int64": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "Subinterface index"
                                                             }
                                                         }
@@ -234,27 +234,27 @@
                                             {
                                                 "name": "ip_mtu",
                                                 "int64": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "Set the management interface IP MTU."
                                                 }
                                             },
                                             {
                                                 "name": "static_routes",
                                                 "list_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "nested_object": {
                                                         "attributes": [
                                                             {
                                                                 "name": "next_hop",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "Static route next hop."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "prefix",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "Static route prefix."
                                                                 }
                                                             }
@@ -270,7 +270,7 @@
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -441,29 +441,29 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "commit_save",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Save a startup configuration after each commit."
                                                     }
                                                 },
                                                 {
                                                     "name": "mgmt",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "mgmt_interface",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "interface_selectors",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -473,7 +473,7 @@
                                                                         {
                                                                             "name": "subinterface_index",
                                                                             "int64": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "Subinterface index"
                                                                             }
                                                                         }
@@ -484,27 +484,27 @@
                                                             {
                                                                 "name": "ip_mtu",
                                                                 "int64": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "Set the management interface IP MTU."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "static_routes",
                                                                 "list_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "nested_object": {
                                                                         "attributes": [
                                                                             {
                                                                                 "name": "next_hop",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "Static route next hop."
                                                                                 }
                                                                             },
                                                                             {
                                                                                 "name": "prefix",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "Static route prefix."
                                                                                 }
                                                                             }
@@ -520,7 +520,7 @@
                                                 {
                                                     "name": "node_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -675,12 +675,12 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -690,7 +690,7 @@
                                 {
                                     "name": "nodes",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -700,20 +700,20 @@
                                 {
                                     "name": "static_routes",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "next_hop",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Static route next hop."
                                                     }
                                                 },
                                                 {
                                                     "name": "prefix",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Static route prefix."
                                                     }
                                                 }
@@ -886,12 +886,12 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "node_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -901,7 +901,7 @@
                                                 {
                                                     "name": "nodes",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -911,20 +911,20 @@
                                                 {
                                                     "name": "static_routes",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "next_hop",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Static route next hop."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "prefix",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Static route prefix."
                                                                     }
                                                                 }
@@ -1145,12 +1145,12 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -1160,7 +1160,7 @@
                                 {
                                     "name": "nodes",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -1170,7 +1170,7 @@
                                 {
                                     "name": "skip_certificate_validation",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "SkipCertificateValidation indicates whether to skip certificate validation after rotation."
                                     }
                                 }
@@ -1338,12 +1338,12 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "node_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -1353,7 +1353,7 @@
                                                 {
                                                     "name": "nodes",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -1363,7 +1363,7 @@
                                                 {
                                                     "name": "skip_certificate_validation",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "SkipCertificateValidation indicates whether to skip certificate validation after rotation."
                                                     }
                                                 }
@@ -1515,32 +1515,32 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "host_name",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "node name of the satellite node."
                                     }
                                 },
                                 {
                                     "name": "host_uplinks",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "host_port",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "HostPort interface of the satellite uplink."
                                                     }
                                                 },
                                                 {
                                                     "name": "satellite_port",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Satellite interface of the satellite uplink."
                                                     }
                                                 }
@@ -1552,39 +1552,39 @@
                                 {
                                     "name": "id",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "ID of the satellite node."
                                     }
                                 },
                                 {
                                     "name": "mac_address",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": " MAC Address of the satellite node."
                                     }
                                 },
                                 {
                                     "name": "port_template",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "connectors",
                                                 "list_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "nested_object": {
                                                         "attributes": [
                                                             {
                                                                 "name": "slot",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "The slot of the connector, e.g. 1-65, connector will get configured on esat-\u003cid\u003e/1/c65"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "type",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "The type of connector, e.g. c1-100g."
                                                                 }
                                                             }
@@ -1596,20 +1596,20 @@
                                             {
                                                 "name": "name",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "The name of the SatellitePortTemplate."
                                                 }
                                             },
                                             {
                                                 "name": "port_mappings",
                                                 "list_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "nested_object": {
                                                         "attributes": [
                                                             {
                                                                 "name": "downlinks",
                                                                 "list": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "element_type": {
                                                                         "string": {}
                                                                     },
@@ -1619,14 +1619,14 @@
                                                             {
                                                                 "name": "primary",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "The primary uplink interface for downlinks."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "secondary",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "The secondary uplink interface for downlinks."
                                                                 }
                                                             }
@@ -1642,14 +1642,14 @@
                                 {
                                     "name": "satellite_profile",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Satellite node profile to be used for the satellite node."
                                     }
                                 },
                                 {
                                     "name": "type",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Type of the satellite node."
                                     }
                                 }
@@ -1877,32 +1877,32 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "host_name",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "node name of the satellite node."
                                                     }
                                                 },
                                                 {
                                                     "name": "host_uplinks",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "host_port",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "HostPort interface of the satellite uplink."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "satellite_port",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Satellite interface of the satellite uplink."
                                                                     }
                                                                 }
@@ -1914,39 +1914,39 @@
                                                 {
                                                     "name": "id",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "ID of the satellite node."
                                                     }
                                                 },
                                                 {
                                                     "name": "mac_address",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": " MAC Address of the satellite node."
                                                     }
                                                 },
                                                 {
                                                     "name": "port_template",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "connectors",
                                                                 "list_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "nested_object": {
                                                                         "attributes": [
                                                                             {
                                                                                 "name": "slot",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "The slot of the connector, e.g. 1-65, connector will get configured on esat-\u003cid\u003e/1/c65"
                                                                                 }
                                                                             },
                                                                             {
                                                                                 "name": "type",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "The type of connector, e.g. c1-100g."
                                                                                 }
                                                                             }
@@ -1958,20 +1958,20 @@
                                                             {
                                                                 "name": "name",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "The name of the SatellitePortTemplate."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "port_mappings",
                                                                 "list_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "nested_object": {
                                                                         "attributes": [
                                                                             {
                                                                                 "name": "downlinks",
                                                                                 "list": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "element_type": {
                                                                                         "string": {}
                                                                                     },
@@ -1981,14 +1981,14 @@
                                                                             {
                                                                                 "name": "primary",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "The primary uplink interface for downlinks."
                                                                                 }
                                                                             },
                                                                             {
                                                                                 "name": "secondary",
                                                                                 "string": {
-                                                                                    "computed_optional_required": "optional",
+                                                                                    "computed_optional_required": "computed",
                                                                                     "description": "The secondary uplink interface for downlinks."
                                                                                 }
                                                                             }
@@ -2004,14 +2004,14 @@
                                                 {
                                                     "name": "satellite_profile",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Satellite node profile to be used for the satellite node."
                                                     }
                                                 },
                                                 {
                                                     "name": "type",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Type of the satellite node."
                                                     }
                                                 }
@@ -2346,19 +2346,19 @@
                                 {
                                     "name": "commit_save",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "Save a startup configuration after each commit."
                                     }
                                 },
                                 {
                                     "name": "mgmt",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "attributes": [
                                             {
                                                 "name": "mgmt_interface",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "interface_selectors",
@@ -2385,8 +2385,20 @@
                                                         {
                                                             "name": "subinterface_index",
                                                             "int64": {
-                                                                "computed_optional_required": "optional",
-                                                                "description": "Subinterface index"
+                                                                "computed_optional_required": "computed_optional",
+                                                                "description": "Subinterface index",
+                                                                "validators": [
+                                                                    {
+                                                                        "custom": {
+                                                                            "imports": [
+                                                                                {
+                                                                                    "path": "github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
+                                                                                }
+                                                                            ],
+                                                                            "schema_definition": "int64validator.AtMost(65535)"
+                                                                        }
+                                                                    }
+                                                                ]
                                                             }
                                                         }
                                                     ],
@@ -2396,27 +2408,39 @@
                                             {
                                                 "name": "ip_mtu",
                                                 "int64": {
-                                                    "computed_optional_required": "optional",
-                                                    "description": "Set the management interface IP MTU."
+                                                    "computed_optional_required": "computed_optional",
+                                                    "description": "Set the management interface IP MTU.",
+                                                    "validators": [
+                                                        {
+                                                            "custom": {
+                                                                "imports": [
+                                                                    {
+                                                                        "path": "github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
+                                                                    }
+                                                                ],
+                                                                "schema_definition": "int64validator.AtMost(65535)"
+                                                            }
+                                                        }
+                                                    ]
                                                 }
                                             },
                                             {
                                                 "name": "static_routes",
                                                 "list_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "nested_object": {
                                                         "attributes": [
                                                             {
                                                                 "name": "next_hop",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed_optional",
                                                                     "description": "Static route next hop."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "prefix",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed_optional",
                                                                     "description": "Static route prefix."
                                                                 }
                                                             }
@@ -2432,7 +2456,7 @@
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -2636,7 +2660,7 @@
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -2646,7 +2670,7 @@
                                 {
                                     "name": "nodes",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -2656,20 +2680,20 @@
                                 {
                                     "name": "static_routes",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "next_hop",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "Static route next hop."
                                                     }
                                                 },
                                                 {
                                                     "name": "prefix",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "Static route prefix."
                                                     }
                                                 }
@@ -2875,7 +2899,7 @@
                                 {
                                     "name": "node_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -2885,7 +2909,7 @@
                                 {
                                     "name": "nodes",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -2895,7 +2919,7 @@
                                 {
                                     "name": "skip_certificate_validation",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "SkipCertificateValidation indicates whether to skip certificate validation after rotation."
                                     }
                                 }

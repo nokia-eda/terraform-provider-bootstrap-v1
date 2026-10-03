@@ -35,10 +35,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) ManagementRouterSpec defines the desired state of ManagementRouter (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -46,26 +42,8 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) ManagementRouterSpec defines the desired state of ManagementRouter (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) ManagementRouterStatus defines the observed state of ManagementRouter (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `node_selectors` (List of String) Selects TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.
-- `nodes` (List of String) List of TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.
-- `static_routes` (Attributes List) Optional list of static routes to add to the management network instance as part of the initial configuration. (see [below for nested schema](#nestedatt--items--spec--static_routes))
-
-<a id="nestedatt--items--spec--static_routes"></a>
-### Nested Schema for `items.spec.static_routes`
-
-Optional:
-
-- `next_hop` (String) Static route next hop.
-- `prefix` (String) Static route prefix.
-
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -95,6 +73,25 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `node_selectors` (List of String) Selects TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.
+- `nodes` (List of String) List of TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.
+- `static_routes` (Attributes List) Optional list of static routes to add to the management network instance as part of the initial configuration. (see [below for nested schema](#nestedatt--items--spec--static_routes))
+
+<a id="nestedatt--items--spec--static_routes"></a>
+### Nested Schema for `items.spec.static_routes`
+
+Read-Only:
+
+- `next_hop` (String) Static route next hop.
+- `prefix` (String) Static route prefix.
+
 
 
 <a id="nestedatt--items--status"></a>

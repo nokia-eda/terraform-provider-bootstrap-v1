@@ -20,10 +20,6 @@ description: |-
 - `name` (String) name of the RotateCertificate
 - `namespace` (String) the namespace scope in which to operate
 
-### Optional
-
-- `spec` (Attributes) RotateCertificateSpec defines the desired state of RotateCertificate (see [below for nested schema](#nestedatt--spec))
-
 ### Read-Only
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--alarms))
@@ -31,17 +27,8 @@ description: |-
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--metadata))
+- `spec` (Attributes) RotateCertificateSpec defines the desired state of RotateCertificate (see [below for nested schema](#nestedatt--spec))
 - `status` (Attributes) RotateCertificateStatus defines the observed state of RotateCertificate (see [below for nested schema](#nestedatt--status))
-
-<a id="nestedatt--spec"></a>
-### Nested Schema for `spec`
-
-Optional:
-
-- `node_selectors` (List of String) Selects TopoNodes for which certificate rotation is to be performed.
-- `nodes` (List of String) List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.
-- `skip_certificate_validation` (Boolean) SkipCertificateValidation indicates whether to skip certificate validation after rotation.
-
 
 <a id="nestedatt--alarms"></a>
 ### Nested Schema for `alarms`
@@ -71,6 +58,16 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--spec"></a>
+### Nested Schema for `spec`
+
+Read-Only:
+
+- `node_selectors` (List of String) Selects TopoNodes for which certificate rotation is to be performed.
+- `nodes` (List of String) List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.
+- `skip_certificate_validation` (Boolean) SkipCertificateValidation indicates whether to skip certificate validation after rotation.
 
 
 <a id="nestedatt--status"></a>

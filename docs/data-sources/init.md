@@ -23,7 +23,6 @@ description: |-
 ### Optional
 
 - `hash` (String) resource content will be returned as it was at the time of this git hash
-- `spec` (Attributes) InitSpec defines the desired state of Init (see [below for nested schema](#nestedatt--spec))
 
 ### Read-Only
 
@@ -32,48 +31,8 @@ description: |-
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--metadata))
+- `spec` (Attributes) InitSpec defines the desired state of Init (see [below for nested schema](#nestedatt--spec))
 - `status` (Attributes) InitStatus defines the observed state of Init (see [below for nested schema](#nestedatt--status))
-
-<a id="nestedatt--spec"></a>
-### Nested Schema for `spec`
-
-Optional:
-
-- `commit_save` (Boolean) Save a startup configuration after each commit.
-- `mgmt` (Attributes) Optional management interface settings.
-Allows setting DHCP clients or static IPs as well as
-the IP MTU. (see [below for nested schema](#nestedatt--spec--mgmt))
-- `node_selectors` (List of String) Optional node selectors to perform initial configuration for.
-If not provided initialization is performed for all nodes.
-
-<a id="nestedatt--spec--mgmt"></a>
-### Nested Schema for `spec.mgmt`
-
-Optional:
-
-- `interface` (Attributes) Mgmt interface selector (see [below for nested schema](#nestedatt--spec--mgmt--interface))
-- `ip_mtu` (Number) Set the management interface IP MTU.
-- `static_routes` (Attributes List) Optional list of static routes to add to the management network instance as part of the initial configuration. (see [below for nested schema](#nestedatt--spec--mgmt--static_routes))
-
-<a id="nestedatt--spec--mgmt--interface"></a>
-### Nested Schema for `spec.mgmt.interface`
-
-Optional:
-
-- `interface_selectors` (List of String) Management interface selector
-- `subinterface_index` (Number) Subinterface index
-
-
-<a id="nestedatt--spec--mgmt--static_routes"></a>
-### Nested Schema for `spec.mgmt.static_routes`
-
-Optional:
-
-- `next_hop` (String) Static route next hop.
-- `prefix` (String) Static route prefix.
-
-
-
 
 <a id="nestedatt--alarms"></a>
 ### Nested Schema for `alarms`
@@ -103,6 +62,47 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--spec"></a>
+### Nested Schema for `spec`
+
+Read-Only:
+
+- `commit_save` (Boolean) Save a startup configuration after each commit.
+- `mgmt` (Attributes) Optional management interface settings.
+Allows setting DHCP clients or static IPs as well as
+the IP MTU. (see [below for nested schema](#nestedatt--spec--mgmt))
+- `node_selectors` (List of String) Optional node selectors to perform initial configuration for.
+If not provided initialization is performed for all nodes.
+
+<a id="nestedatt--spec--mgmt"></a>
+### Nested Schema for `spec.mgmt`
+
+Read-Only:
+
+- `interface` (Attributes) Mgmt interface selector (see [below for nested schema](#nestedatt--spec--mgmt--interface))
+- `ip_mtu` (Number) Set the management interface IP MTU.
+- `static_routes` (Attributes List) Optional list of static routes to add to the management network instance as part of the initial configuration. (see [below for nested schema](#nestedatt--spec--mgmt--static_routes))
+
+<a id="nestedatt--spec--mgmt--interface"></a>
+### Nested Schema for `spec.mgmt.interface`
+
+Read-Only:
+
+- `interface_selectors` (List of String) Management interface selector
+- `subinterface_index` (Number) Subinterface index
+
+
+<a id="nestedatt--spec--mgmt--static_routes"></a>
+### Nested Schema for `spec.mgmt.static_routes`
+
+Read-Only:
+
+- `next_hop` (String) Static route next hop.
+- `prefix` (String) Static route prefix.
+
+
 
 
 <a id="nestedatt--status"></a>

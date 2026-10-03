@@ -102,7 +102,7 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 			"spec": schema.SingleNestedAttribute{
 				Attributes: map[string]schema.Attribute{
 					"host_name": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "node name of the satellite node.",
 						MarkdownDescription: "node name of the satellite node.",
 					},
@@ -110,12 +110,12 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"host_port": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "HostPort interface of the satellite uplink.",
 									MarkdownDescription: "HostPort interface of the satellite uplink.",
 								},
 								"satellite_port": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Satellite interface of the satellite uplink.",
 									MarkdownDescription: "Satellite interface of the satellite uplink.",
 								},
@@ -126,17 +126,17 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 								},
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Uplinks to be created for the satellite node.",
 						MarkdownDescription: "Uplinks to be created for the satellite node.",
 					},
 					"id": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "ID of the satellite node.",
 						MarkdownDescription: "ID of the satellite node.",
 					},
 					"mac_address": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         " MAC Address of the satellite node.",
 						MarkdownDescription: " MAC Address of the satellite node.",
 					},
@@ -146,12 +146,12 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 								NestedObject: schema.NestedAttributeObject{
 									Attributes: map[string]schema.Attribute{
 										"slot": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "The slot of the connector, e.g. 1-65, connector will get configured on esat-<id>/1/c65",
 											MarkdownDescription: "The slot of the connector, e.g. 1-65, connector will get configured on esat-<id>/1/c65",
 										},
 										"type": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "The type of connector, e.g. c1-100g.",
 											MarkdownDescription: "The type of connector, e.g. c1-100g.",
 										},
@@ -162,12 +162,12 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 										},
 									},
 								},
-								Optional:            true,
+								Computed:            true,
 								Description:         "List of connector components within the SatellitePortTemplate.\nUsed to define the type and location of connectors.",
 								MarkdownDescription: "List of connector components within the SatellitePortTemplate.\nUsed to define the type and location of connectors.",
 							},
 							"name": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "The name of the SatellitePortTemplate.",
 								MarkdownDescription: "The name of the SatellitePortTemplate.",
 							},
@@ -176,17 +176,17 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 									Attributes: map[string]schema.Attribute{
 										"downlinks": schema.ListAttribute{
 											ElementType:         types.StringType,
-											Optional:            true,
+											Computed:            true,
 											Description:         "Downlinks for the SatelliteUplink.",
 											MarkdownDescription: "Downlinks for the SatelliteUplink.",
 										},
 										"primary": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "The primary uplink interface for downlinks.",
 											MarkdownDescription: "The primary uplink interface for downlinks.",
 										},
 										"secondary": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "The secondary uplink interface for downlinks.",
 											MarkdownDescription: "The secondary uplink interface for downlinks.",
 										},
@@ -197,7 +197,7 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 										},
 									},
 								},
-								Optional:            true,
+								Computed:            true,
 								Description:         "Uplinks for the SatellitePortTemplate.",
 								MarkdownDescription: "Uplinks for the SatellitePortTemplate.",
 							},
@@ -207,17 +207,17 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 								AttrTypes: PortTemplateValue{}.AttributeTypes(ctx),
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Port template to be used for the satellite node.",
 						MarkdownDescription: "Port template to be used for the satellite node.",
 					},
 					"satellite_profile": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Satellite node profile to be used for the satellite node.",
 						MarkdownDescription: "Satellite node profile to be used for the satellite node.",
 					},
 					"type": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Type of the satellite node.",
 						MarkdownDescription: "Type of the satellite node.",
 					},
@@ -227,7 +227,7 @@ func SatelliteDataSourceSchema(ctx context.Context) schema.Schema {
 						AttrTypes: SpecValue{}.AttributeTypes(ctx),
 					},
 				},
-				Optional:            true,
+				Computed:            true,
 				Description:         "SatelliteSpec defines the desired state of Satellite",
 				MarkdownDescription: "SatelliteSpec defines the desired state of Satellite",
 			},

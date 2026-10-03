@@ -102,14 +102,14 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 			"spec": schema.SingleNestedAttribute{
 				Attributes: map[string]schema.Attribute{
 					"commit_save": schema.BoolAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Save a startup configuration after each commit.",
 						MarkdownDescription: "Save a startup configuration after each commit.",
 					},
 					"mgmt": schema.SingleNestedAttribute{
 						Attributes: map[string]schema.Attribute{
 							"ip_mtu": schema.Int64Attribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "Set the management interface IP MTU.",
 								MarkdownDescription: "Set the management interface IP MTU.",
 							},
@@ -117,12 +117,12 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 								Attributes: map[string]schema.Attribute{
 									"interface_selectors": schema.ListAttribute{
 										ElementType:         types.StringType,
-										Optional:            true,
+										Computed:            true,
 										Description:         "Management interface selector",
 										MarkdownDescription: "Management interface selector",
 									},
 									"subinterface_index": schema.Int64Attribute{
-										Optional:            true,
+										Computed:            true,
 										Description:         "Subinterface index",
 										MarkdownDescription: "Subinterface index",
 									},
@@ -132,7 +132,7 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 										AttrTypes: MgmtInterfaceValue{}.AttributeTypes(ctx),
 									},
 								},
-								Optional:            true,
+								Computed:            true,
 								Description:         "Mgmt interface selector",
 								MarkdownDescription: "Mgmt interface selector",
 							},
@@ -140,12 +140,12 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 								NestedObject: schema.NestedAttributeObject{
 									Attributes: map[string]schema.Attribute{
 										"next_hop": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "Static route next hop.",
 											MarkdownDescription: "Static route next hop.",
 										},
 										"prefix": schema.StringAttribute{
-											Optional:            true,
+											Computed:            true,
 											Description:         "Static route prefix.",
 											MarkdownDescription: "Static route prefix.",
 										},
@@ -156,7 +156,7 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 										},
 									},
 								},
-								Optional:            true,
+								Computed:            true,
 								Description:         "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 								MarkdownDescription: "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 							},
@@ -166,13 +166,13 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 								AttrTypes: MgmtValue{}.AttributeTypes(ctx),
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Optional management interface settings.\nAllows setting DHCP clients or static IPs as well as\nthe IP MTU.",
 						MarkdownDescription: "Optional management interface settings.\nAllows setting DHCP clients or static IPs as well as\nthe IP MTU.",
 					},
 					"node_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
-						Optional:            true,
+						Computed:            true,
 						Description:         "Optional node selectors to perform initial configuration for.\nIf not provided initialization is performed for all nodes.",
 						MarkdownDescription: "Optional node selectors to perform initial configuration for.\nIf not provided initialization is performed for all nodes.",
 					},
@@ -182,7 +182,7 @@ func InitDataSourceSchema(ctx context.Context) schema.Schema {
 						AttrTypes: SpecValue{}.AttributeTypes(ctx),
 					},
 				},
-				Optional:            true,
+				Computed:            true,
 				Description:         "InitSpec defines the desired state of Init",
 				MarkdownDescription: "InitSpec defines the desired state of Init",
 			},

@@ -35,10 +35,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) SatelliteSpec defines the desired state of Satellite (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -46,60 +42,8 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) SatelliteSpec defines the desired state of Satellite (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) SatelliteStatus defines the observed state of Satellite (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `host_name` (String) node name of the satellite node.
-- `host_uplinks` (Attributes List) Uplinks to be created for the satellite node. (see [below for nested schema](#nestedatt--items--spec--host_uplinks))
-- `id` (String) ID of the satellite node.
-- `mac_address` (String) MAC Address of the satellite node.
-- `port_template` (Attributes) Port template to be used for the satellite node. (see [below for nested schema](#nestedatt--items--spec--port_template))
-- `satellite_profile` (String) Satellite node profile to be used for the satellite node.
-- `type` (String) Type of the satellite node.
-
-<a id="nestedatt--items--spec--host_uplinks"></a>
-### Nested Schema for `items.spec.host_uplinks`
-
-Optional:
-
-- `host_port` (String) HostPort interface of the satellite uplink.
-- `satellite_port` (String) Satellite interface of the satellite uplink.
-
-
-<a id="nestedatt--items--spec--port_template"></a>
-### Nested Schema for `items.spec.port_template`
-
-Optional:
-
-- `connectors` (Attributes List) List of connector components within the SatellitePortTemplate.
-Used to define the type and location of connectors. (see [below for nested schema](#nestedatt--items--spec--port_template--connectors))
-- `name` (String) The name of the SatellitePortTemplate.
-- `port_mappings` (Attributes List) Uplinks for the SatellitePortTemplate. (see [below for nested schema](#nestedatt--items--spec--port_template--port_mappings))
-
-<a id="nestedatt--items--spec--port_template--connectors"></a>
-### Nested Schema for `items.spec.port_template.connectors`
-
-Optional:
-
-- `slot` (String) The slot of the connector, e.g. 1-65, connector will get configured on esat-<id>/1/c65
-- `type` (String) The type of connector, e.g. c1-100g.
-
-
-<a id="nestedatt--items--spec--port_template--port_mappings"></a>
-### Nested Schema for `items.spec.port_template.port_mappings`
-
-Optional:
-
-- `downlinks` (List of String) Downlinks for the SatelliteUplink.
-- `primary` (String) The primary uplink interface for downlinks.
-- `secondary` (String) The secondary uplink interface for downlinks.
-
-
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -129,6 +73,59 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `host_name` (String) node name of the satellite node.
+- `host_uplinks` (Attributes List) Uplinks to be created for the satellite node. (see [below for nested schema](#nestedatt--items--spec--host_uplinks))
+- `id` (String) ID of the satellite node.
+- `mac_address` (String) MAC Address of the satellite node.
+- `port_template` (Attributes) Port template to be used for the satellite node. (see [below for nested schema](#nestedatt--items--spec--port_template))
+- `satellite_profile` (String) Satellite node profile to be used for the satellite node.
+- `type` (String) Type of the satellite node.
+
+<a id="nestedatt--items--spec--host_uplinks"></a>
+### Nested Schema for `items.spec.host_uplinks`
+
+Read-Only:
+
+- `host_port` (String) HostPort interface of the satellite uplink.
+- `satellite_port` (String) Satellite interface of the satellite uplink.
+
+
+<a id="nestedatt--items--spec--port_template"></a>
+### Nested Schema for `items.spec.port_template`
+
+Read-Only:
+
+- `connectors` (Attributes List) List of connector components within the SatellitePortTemplate.
+Used to define the type and location of connectors. (see [below for nested schema](#nestedatt--items--spec--port_template--connectors))
+- `name` (String) The name of the SatellitePortTemplate.
+- `port_mappings` (Attributes List) Uplinks for the SatellitePortTemplate. (see [below for nested schema](#nestedatt--items--spec--port_template--port_mappings))
+
+<a id="nestedatt--items--spec--port_template--connectors"></a>
+### Nested Schema for `items.spec.port_template.connectors`
+
+Read-Only:
+
+- `slot` (String) The slot of the connector, e.g. 1-65, connector will get configured on esat-<id>/1/c65
+- `type` (String) The type of connector, e.g. c1-100g.
+
+
+<a id="nestedatt--items--spec--port_template--port_mappings"></a>
+### Nested Schema for `items.spec.port_template.port_mappings`
+
+Read-Only:
+
+- `downlinks` (List of String) Downlinks for the SatelliteUplink.
+- `primary` (String) The primary uplink interface for downlinks.
+- `secondary` (String) The secondary uplink interface for downlinks.
+
+
 
 
 <a id="nestedatt--items--status"></a>

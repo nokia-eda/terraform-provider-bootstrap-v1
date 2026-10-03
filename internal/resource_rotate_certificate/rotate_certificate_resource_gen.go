@@ -127,17 +127,20 @@ func RotateCertificateResourceSchema(ctx context.Context) schema.Schema {
 					"node_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Selects TopoNodes for which certificate rotation is to be performed.",
 						MarkdownDescription: "Selects TopoNodes for which certificate rotation is to be performed.",
 					},
 					"nodes": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.",
 						MarkdownDescription: "List of TopoNodes for which certificate rotation is to be performed. When left empty, all TopoNodes are selected.",
 					},
 					"skip_certificate_validation": schema.BoolAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "SkipCertificateValidation indicates whether to skip certificate validation after rotation.",
 						MarkdownDescription: "SkipCertificateValidation indicates whether to skip certificate validation after rotation.",
 					},

@@ -103,13 +103,13 @@ func ManagementRouterDataSourceSchema(ctx context.Context) schema.Schema {
 				Attributes: map[string]schema.Attribute{
 					"node_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
-						Optional:            true,
+						Computed:            true,
 						Description:         "Selects TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.",
 						MarkdownDescription: "Selects TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.",
 					},
 					"nodes": schema.ListAttribute{
 						ElementType:         types.StringType,
-						Optional:            true,
+						Computed:            true,
 						Description:         "List of TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.",
 						MarkdownDescription: "List of TopoNodes on which to configure the management VRF. When left empty, all TopoNodes are selected.",
 					},
@@ -117,12 +117,12 @@ func ManagementRouterDataSourceSchema(ctx context.Context) schema.Schema {
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"next_hop": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Static route next hop.",
 									MarkdownDescription: "Static route next hop.",
 								},
 								"prefix": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Static route prefix.",
 									MarkdownDescription: "Static route prefix.",
 								},
@@ -133,7 +133,7 @@ func ManagementRouterDataSourceSchema(ctx context.Context) schema.Schema {
 								},
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 						MarkdownDescription: "Optional list of static routes to add to the management network instance as part of the initial configuration.",
 					},
@@ -143,7 +143,7 @@ func ManagementRouterDataSourceSchema(ctx context.Context) schema.Schema {
 						AttrTypes: SpecValue{}.AttributeTypes(ctx),
 					},
 				},
-				Optional:            true,
+				Computed:            true,
 				Description:         "ManagementRouterSpec defines the desired state of ManagementRouter",
 				MarkdownDescription: "ManagementRouterSpec defines the desired state of ManagementRouter",
 			},
